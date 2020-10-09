@@ -1,4 +1,4 @@
-﻿namespace Hebrewverser
+﻿namespace RTLverser
 {
     partial class MainForm
     {
