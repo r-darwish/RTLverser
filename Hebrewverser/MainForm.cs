@@ -14,16 +14,6 @@ namespace RTLverser
             InitializeComponent();
         }
 
-        private void UserText_TextChanged(object sender, EventArgs e)
-        {
-            UpdateReversedText();
-        }
-
-        private void UpdateReversedText()
-        {
-            machineTextBox.Text = ReverseRTL(userText.Text);
-        }
-
         public static string Reverse(string s)
         {
             var charArray = s.ToCharArray();
@@ -58,6 +48,11 @@ namespace RTLverser
                 output.Append("\r\n");
             }
             return output.ToString();
+        }
+
+        private void copyButton_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetData(DataFormats.Text, ReverseRTL(userTextBox.Text));
         }
     }
 }

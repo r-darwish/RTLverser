@@ -28,76 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainer = new System.Windows.Forms.SplitContainer();
-            this.userText = new System.Windows.Forms.TextBox();
-            this.machineTextBox = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
-            this.splitContainer.Panel1.SuspendLayout();
-            this.splitContainer.Panel2.SuspendLayout();
-            this.splitContainer.SuspendLayout();
+            this.userTextBox = new System.Windows.Forms.TextBox();
+            this.copyButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // splitContainer
+            // userTextBox
             // 
-            this.splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer.Name = "splitContainer";
-            this.splitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.userTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.userTextBox.Location = new System.Drawing.Point(10, 10);
+            this.userTextBox.Multiline = true;
+            this.userTextBox.Name = "userTextBox";
+            this.userTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.userTextBox.Size = new System.Drawing.Size(760, 310);
+            this.userTextBox.TabIndex = 0;
             // 
-            // splitContainer.Upper
+            // copyButton
             // 
-            this.splitContainer.Panel1.Controls.Add(this.userText);
-            // 
-            // splitContainer.Lower
-            // 
-            this.splitContainer.Panel2.Controls.Add(this.machineTextBox);
-            this.splitContainer.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer.SplitterDistance = 266;
-            this.splitContainer.TabIndex = 0;
-            this.splitContainer.Text = "splitContainer1";
-            // 
-            // userText
-            // 
-            this.userText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userText.Location = new System.Drawing.Point(0, 0);
-            this.userText.Multiline = true;
-            this.userText.Name = "userText";
-            this.userText.Size = new System.Drawing.Size(800, 266);
-            this.userText.TabIndex = 0;
-            this.userText.TextChanged += new System.EventHandler(this.UserText_TextChanged);
-            // 
-            // machineTextBox
-            // 
-            this.machineTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.machineTextBox.Location = new System.Drawing.Point(0, 0);
-            this.machineTextBox.Multiline = true;
-            this.machineTextBox.Name = "machineTextBox";
-            this.machineTextBox.Size = new System.Drawing.Size(800, 180);
-            this.machineTextBox.TabIndex = 0;
+            this.copyButton.Location = new System.Drawing.Point(10, 329);
+            this.copyButton.Name = "copyButton";
+            this.copyButton.Size = new System.Drawing.Size(75, 23);
+            this.copyButton.TabIndex = 1;
+            this.copyButton.Text = "&Copy";
+            this.copyButton.UseVisualStyleBackColor = true;
+            this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.splitContainer);
+            this.ClientSize = new System.Drawing.Size(784, 361);
+            this.Controls.Add(this.copyButton);
+            this.Controls.Add(this.userTextBox);
             this.Name = "MainForm";
             this.Text = "RTLverser";
-            this.splitContainer.Panel1.ResumeLayout(false);
-            this.splitContainer.Panel1.PerformLayout();
-            this.splitContainer.Panel2.ResumeLayout(false);
-            this.splitContainer.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
-            this.splitContainer.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.SplitContainer splitContainer;
-        private System.Windows.Forms.TextBox userText;
-        private System.Windows.Forms.TextBox machineTextBox;
+        private System.Windows.Forms.TextBox userTextBox;
+        private System.Windows.Forms.Button copyButton;
     }
 }
 
