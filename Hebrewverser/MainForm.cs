@@ -50,7 +50,7 @@ namespace RTLverser
             return output.ToString();
         }
 
-        private void copyButton_Click(object sender, EventArgs e)
+        private void CopyButton_Click(object sender, EventArgs e)
         {
             Clipboard.SetData(DataFormats.Text, ReverseRTL(userTextBox.Text));
         }

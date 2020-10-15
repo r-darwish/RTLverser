@@ -53,7 +53,7 @@
             this.copyButton.TabIndex = 1;
             this.copyButton.Text = "&Copy";
             this.copyButton.UseVisualStyleBackColor = true;
-            this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
+            this.copyButton.Click += new System.EventHandler(this.CopyButton_Click);
             // 
             // MainForm
             // 
